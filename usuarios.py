@@ -13,8 +13,8 @@ for i in range(ingresa):
     columna3.append(random.randint(0,5000))
     columna4.append(random.randint(0,5000))
     
-name = input("Ingrese el nombre del archivo: ")
-doc = open(name,"pra.csv", 'w')
-for i in range(len(ingresa)):
-    doc.write('{}, {}, {}, {}\n'.format(columna1[i],columna2[i],columna3[i], columna4[i]))
-doc.close()
+f = open("paraPoblar.csv",'w')
+for i in range(len(columna1)):
+    titulo="Columna1 \tColumna2 \tColumna3 \tColumna4 "
+    f.write('{},{},{},{}\n'.format(columna1[i], columna2[i], columna3[i], columna4[i]))
+f.close()
