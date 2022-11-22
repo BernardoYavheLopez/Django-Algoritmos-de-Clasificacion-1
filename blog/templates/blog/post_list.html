@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+
+{% block title%}Base de Datos{% endblock title %}
+
+{% block content %} 
+<footer class="blockquote-footer">Algoritmos de Clasificacion v9</footer> 
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                 <th scope="col"></th>
+                 <th scope="col">x1</th>
+                 <th scope="col">x2</th>
+                 <th scope="col">x3</th>
+                 <th scope="col">x4</th>
+                <th scope="col">Suma</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for var,suma in contexto %}
+            <tr  id="tabla1">
+                <th scope="row"></th>
+                <td>{{var.var1}}</td>
+                <td>{{var.var2}}</td>
+                <td>{{var.var3}}</td>
+                <td>{{var.var4}}</td>
+                <td>{{suma}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <table class="table table-dark">
+        <thead>
+            <th scope="col">Resultados</th>
+        </thead>
+        <tbody>
+          {%for val in suma%}
+            <tr id="tabla2">
+              <td>{{val}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+  {% endblock %} 
